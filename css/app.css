@@ -1,0 +1,230 @@
+.spiner {
+  width: 150px;
+  height: 150px;
+  animation: bounce 0.5s infinite alternate;
+  border-radius: 100%;
+  position: absolute;
+  left: calc(50% - 75px);
+}
+.spiner .ball {
+  width: 100%;
+  height: 100%;
+  border: solid 1px #c3c3c3;
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+.spiner .ball::after {
+  content: "";
+  width: 35%;
+  height: 35%;
+  z-index: 2;
+  background-color: #fff;
+  border: solid 10px black;
+  border-radius: 100%;
+  left: 32%;
+  top: calc(50% - 17.5%);
+  left: calc(50% - 17.5%);
+  position: absolute;
+}
+.spiner .ball .top-red {
+  width: 110%;
+  height: 50%;
+  background-color: red;
+  top: 0;
+  position: absolute;
+}
+.spiner .ball .top-red::before {
+  content: "";
+  position: absolute;
+  height: 10%;
+  top: 100%;
+  width: 100%;
+  background-color: #000;
+}
+.spiner .ball .bottom-white {
+  width: 300px;
+  height: 50%;
+  bottom: 0;
+  position: absolute;
+}
+
+@keyframes junp {
+  0% {
+    margin-top: 0px;
+    box-shadow: -200px -200px 0px -200px rgba(0, 0, 0, 0.78);
+    -webkit-box-shadow: -200px -200px 0px -200px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: -200px -200px 0px -200px rgba(0, 0, 0, 0.78);
+  }
+  100% {
+    margin-top: 100px;
+    box-shadow: -3px 50px 91px -24px rgba(0, 0, 0, 0.78);
+    -webkit-box-shadow: -3px 50px 91px -24px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: -3px 50px 91px -24px rgba(0, 0, 0, 0.78);
+  }
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.title {
+  position: relative;
+  display: table;
+  padding-bottom: 10px;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  top: 200px;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid #000;
+  position: initial;
+  transform: rotate(45deg);
+  left: 50%;
+  cursor: pointer;
+}
+.arrow-icon::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 3px;
+  top: 22%;
+  background-color: #000;
+  border-radius: 3px;
+  transform: rotate(-45deg);
+}
+.arrow-icon.next {
+  transform: rotate(225deg);
+}
+
+.card {
+  cursor: pointer;
+}
+
+.list-type {
+  display: inline-block;
+}
+.list-type li {
+  float: left;
+  margin: 0 10px;
+  list-style: none;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.list-type li a {
+  font-size: 20px;
+}
+
+header .navbar {
+  background-color: red !important;
+}
+header .navbar a {
+  color: #fff !important;
+  font-weight: bold;
+}
+
+.form-control {
+  padding: 0 0 0 20px;
+  border: 0;
+  border-radius: 20px 0 0 20px;
+  box-sizing: content-box !important;
+  border: solid 1px;
+  box-shadow: 10px 10px 23px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 23px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 23px -6px rgba(0, 0, 0, 0.75);
+}
+.form-control:focus {
+  box-shadow: 10px 10px 23px -6px red;
+  -webkit-box-shadow: 10px 10px 23px -6px red;
+  -moz-box-shadow: 10px 10px 23px -6px red;
+  border-color: red;
+}
+
+.bt-buscar {
+  background-color: red;
+  padding: 0 20px 0 20px;
+  border: 0;
+  color: #fff;
+  font-weight: bolder;
+  border-radius: 0 20px 20px 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.list li .number {
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+  display: table;
+  border-radius: 100%;
+}
+.list li span {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+#abilities {
+  display: flex;
+  background-size: 100% 100%;
+}
+
+.pokemom-img {
+  width: 85%;
+}
+
+.bg-opacity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 10%;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.arow {
+  position: absolute;
+}
+.arow.arow-back {
+  left: 10%;
+}
+.arow.arow-next {
+  right: 10%;
+}
+
+/*# sourceMappingURL=app.css.map */
