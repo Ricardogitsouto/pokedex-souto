@@ -1,3 +1,11 @@
+header .navbar {
+  background-color: red !important;
+}
+header .navbar a {
+  color: #fff !important;
+  font-weight: bold;
+}
+
 .spiner {
   width: 150px;
   height: 150px;
@@ -126,26 +134,109 @@
   cursor: pointer;
 }
 
-.list-type {
-  display: inline-block;
-}
-.list-type li {
-  float: left;
-  margin: 0 10px;
-  list-style: none;
-  text-transform: capitalize;
-  font-weight: bold;
-}
-.list-type li a {
-  font-size: 20px;
+.no-scroll {
+  overflow: hidden;
 }
 
-header .navbar {
-  background-color: red !important;
+.filter {
+  border-radius: 20px;
+  cursor: pointer;
 }
-header .navbar a {
-  color: #fff !important;
-  font-weight: bold;
+
+#icon-filter {
+  width: 30px;
+  height: 20px;
+  border-top: solid 2px red;
+  border-bottom: solid 2px red;
+  position: relative;
+}
+#icon-filter div {
+  width: 100%;
+  height: 2px;
+  background: red;
+  position: absolute;
+  top: calc(50% - 1px);
+}
+#icon-filter div::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: calc(50% - 4px);
+  bottom: -4px;
+  background-color: red;
+  border-radius: 100%;
+}
+#icon-filter::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 100%;
+}
+#icon-filter::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: -4px;
+  bottom: -4px;
+  background-color: red;
+  border-radius: 100%;
+}
+
+.container-modal-filter {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+.container-modal-filter .modal-filter-gray {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: red;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.container-modal-filter .box-filters {
+  width: 400px;
+  height: 100%;
+  background-color: #f3f3f3;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+}
+.container-modal-filter .box-filters .filter-header {
+  height: 50px;
+  background-color: red;
+  -webkit-box-shadow: 0px 2px 36px 1px rgba(0, 0, 0, 0.62);
+  box-shadow: 0px 2px 36px 1px rgba(0, 0, 0, 0.62);
+}
+.container-modal-filter .box-filters .body-filter {
+  overflow: scroll;
+  padding: 20px;
+  height: 100%;
+}
+
+#list-type {
+  padding: 20px;
+  -webkit-box-shadow: 0px 2px 36px 1px rgba(0, 0, 0, 0.62);
+  box-shadow: 0px 2px 36px 1px rgba(0, 0, 0, 0.62);
+  border-radius: 20px;
+}
+#list-type li {
+  border-bottom: solid 2px #ccc;
+  list-style: none;
+}
+#list-type li a {
+  display: block;
+  padding: 10px;
 }
 
 .form-control {
@@ -154,6 +245,7 @@ header .navbar a {
   border-radius: 20px 0 0 20px;
   box-sizing: content-box !important;
   border: solid 1px;
+  font-size: 20px;
   box-shadow: 10px 10px 23px -6px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 23px -6px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 23px -6px rgba(0, 0, 0, 0.75);
@@ -166,6 +258,7 @@ header .navbar a {
 }
 
 .bt-buscar {
+  font-size: 20px;
   background-color: red;
   padding: 0 20px 0 20px;
   border: 0;

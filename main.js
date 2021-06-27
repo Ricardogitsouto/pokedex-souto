@@ -3,6 +3,9 @@
    
 import { getPokemon } from "./module/service/get-pokemon.js";
 import { getPokemonCard } from "./module/build-cards.js";
+import { modalFilter } from "./module/modal-filter.js";
+
+modalFilter();
 
 for (let index = 1; index < 100; index++) {
     getPokemonCard(index)
